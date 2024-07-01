@@ -1,4 +1,4 @@
-﻿namespace DepthSegmentation
+﻿namespace DepthEstimation
 {
     partial class Form1
     {

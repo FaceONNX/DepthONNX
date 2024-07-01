@@ -2,11 +2,11 @@ using DepthONNX;
 using UMapx.Core;
 using UMapx.Imaging;
 
-namespace DepthSegmentation
+namespace DepthEstimation
 {
     public partial class Form1 : Form
     {
-        private readonly DepthEstimator _depthSegmentator;
+        private readonly DepthEstimator _depthEstimator;
 
         public Form1()
         {
@@ -18,7 +18,7 @@ namespace DepthSegmentation
             AllowDrop = true;
             Text = "DepthONNX: Depth estimation";
 
-            _depthSegmentator = new DepthEstimator(DepthEstimatorQuality.High);
+            _depthEstimator = new DepthEstimator(DepthEstimatorQuality.High);
             var image = new Bitmap("example.png");
             Process(image);
         }
@@ -39,7 +39,7 @@ namespace DepthSegmentation
 
         private void Process(Bitmap image)
         {
-            var results = _depthSegmentator.Forward(
+            var results = _depthEstimator.Forward(
                 image: image,
                 interpolationMode: InterpolationMode.Bicubic);
 

@@ -1,5 +1,3 @@
-using DepthSegmentation;
-
 namespace DepthEstimation
 {
     internal static class Program

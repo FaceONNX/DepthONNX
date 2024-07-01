@@ -27,22 +27,22 @@ namespace DepthONNX
 
         /// <summary>
         /// Initializes depth estimator.
-        /// <param name="depthSegmentatorQuality">Depth estimator quality</param>
+        /// <param name="depthEstimatorQuality">Depth estimator quality</param>
         /// </summary>
-        public DepthEstimator(DepthEstimatorQuality depthSegmentatorQuality = DepthEstimatorQuality.Medium)
+        public DepthEstimator(DepthEstimatorQuality depthEstimatorQuality = DepthEstimatorQuality.Medium)
         {
-            DepthSegmentatorQuality = depthSegmentatorQuality;
+            DepthEstimatorQuality = depthEstimatorQuality;
             _session = new InferenceSession(Properties.Resources.depth_anything_v2_vits);
         }
 
         /// <summary>
         /// Initializes depth estimator.
         /// </summary>
-        /// <param name="depthSegmentatorQuality">Depth estimator quality</param>
+        /// <param name="depthEstimatorQuality">Depth estimator quality</param>
         /// <param name="options">Session options</param>
-        public DepthEstimator(SessionOptions options, DepthEstimatorQuality depthSegmentatorQuality = DepthEstimatorQuality.Medium)
+        public DepthEstimator(SessionOptions options, DepthEstimatorQuality depthEstimatorQuality = DepthEstimatorQuality.Medium)
         {
-            DepthSegmentatorQuality = depthSegmentatorQuality;
+            DepthEstimatorQuality = depthEstimatorQuality;
             _session = new InferenceSession(Properties.Resources.depth_anything_v2_vits, options);
         }
 
@@ -51,9 +51,9 @@ namespace DepthONNX
         #region Properties
 
         /// <summary>
-        /// Gets or sets depth segmentator quality.
+        /// Gets or sets depth estimator quality.
         /// </summary>
-        public DepthEstimatorQuality DepthSegmentatorQuality { get; set; }
+        public DepthEstimatorQuality DepthEstimatorQuality { get; set; }
 
         #endregion
 
@@ -74,7 +74,7 @@ namespace DepthONNX
 
             var width = image[0].GetLength(1);
             var height = image[0].GetLength(0);
-            var length = (int)DepthSegmentatorQuality;
+            var length = (int)DepthEstimatorQuality;
             var size = new Size(length, length);
 
             var resized = new float[3][,];
