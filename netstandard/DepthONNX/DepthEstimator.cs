@@ -125,7 +125,8 @@ namespace DepthONNX
                 }
             }
 
-            return mask.ResizePreserved(height, width, interpolationMode);
+            // normalize and resize
+            return mask.Normalized().ResizePreserved(height, width, interpolationMode);
         }
 
         #endregion

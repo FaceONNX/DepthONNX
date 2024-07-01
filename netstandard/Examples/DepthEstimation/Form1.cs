@@ -43,7 +43,7 @@ namespace DepthSegmentation
                 image: image,
                 interpolationMode: InterpolationMode.Bicubic);
 
-            var mask = results.Normalized().FromGrayscale();
+            var mask = results.FromGrayscale();
             image?.Dispose();
 
             //mask.Save("output.png", System.Drawing.Imaging.ImageFormat.Png);
