@@ -1,4 +1,4 @@
-<p align="center"><img width="30%" src="docs/depthonnx_logo.png" /></p>
+<p align="center"><img width="25%" src="docs/depthonnx_logo.png" /></p>
 <p align="center"> Monocular depth estimation library based on deep neural networks and <b>ONNX</b> runtime </p>  
 
 # ClothONNX
