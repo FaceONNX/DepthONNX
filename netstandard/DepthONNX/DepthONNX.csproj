@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <AssemblyName>DepthONNX</AssemblyName>
 	  <LangVersion>8.0</LangVersion>
-	  <Version>1.0.2.1</Version>
-	  <FileVersion>1.0.2.1</FileVersion>
+	  <Version>1.0.2.2</Version>
+	  <FileVersion>1.0.2.2</FileVersion>
 	  <Authors>Valery Asiryan</Authors>
 	  <Company>Valery Asiryan</Company>
 	  <Description>Monocular depth estimation library based on deep neural networks and ONNX runtime.</Description>
@@ -13,7 +13,7 @@
 	  <RepositoryType>Open-source</RepositoryType>
 	  <PackageId>DepthONNX</PackageId>
 	  <Product>DepthONNX</Product>
-	  <AssemblyVersion>1.0.2.1</AssemblyVersion>
+	  <AssemblyVersion>1.0.2.2</AssemblyVersion>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageTags>monocular depth estimation onnx neural-networks</PackageTags>
 	  <RepositoryUrl>https://github.com/FaceONNX/DepthONNX</RepositoryUrl>
@@ -31,7 +31,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.ML.OnnxRuntime.Managed" Version="1.9.0" />
-		<PackageReference Include="UMapx" Version="6.1.0.2" />
+		<PackageReference Include="UMapx" Version="6.1.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
